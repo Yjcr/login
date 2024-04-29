@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>registro para gente god</h1>
+<!-- <form action="/tasks/hola" method="POST" > -->
+<!-- la funcion 'action' nos permitira enviar informacion a una url en especifico -->
+{{error}}
+<form method = "POST" >
+    {% csrf_token %}
+
+     {{form.as_p}}
+     <button>
+        save
+    </button>
+
+</form>
+
+{% endblock %}
